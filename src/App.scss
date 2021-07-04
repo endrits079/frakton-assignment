@@ -1,0 +1,74 @@
+@import "./Styles/_variables.scss";
+
+// resets
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 20px;
+  padding-top: 120px;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+// util classes
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.container-half {
+  width: $half;
+}
+.container-quarter-3 {
+  width: $quarter-3;
+}
+
+.text-center{
+  text-align: center;
+}
+
+$font-sizes: 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40;
+$colors: (
+  "primary": $primary,
+  "primary-black": rgba(0, 0, 0, 0.7),
+  "white": #fff,
+);
+
+@each $size in $font-sizes {
+  .font-size-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+  .background-#{$name} {
+    background: $color;
+  }
+}
