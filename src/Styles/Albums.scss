@@ -1,0 +1,22 @@
+.albums_page-title{
+    margin-bottom:40px;
+    text-align: center;
+ }
+ 
+ .albums {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   column-gap: 30px;
+   row-gap: 30px;
+ }
+ 
+ .album {
+   display: block;
+   padding: 20px 40px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+ 
+   .title {
+     font-size: 1.6rem;
+   }
+ }
+ 
